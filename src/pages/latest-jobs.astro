@@ -1,0 +1,132 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import JobCard from "../components/JobCard.astro";
+import { getJobImage } from "../data/unsplash";
+
+const jobs = await getCollection("jobs", ({ data }) => data.active);
+---
+<BaseLayout title="Latest Jobs in Pakistan - SkillStart Jobs" description="Find the newest beginner-friendly job opportunities in Pakistan for Matric, Intermediate, and fresh candidates.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> / Latest Jobs</div>
+      <h1>Find the Newest Job Opportunities in Pakistan</h1>
+      <p>Recently added beginner-friendly vacancies across Pakistan.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="content-card">
+        <p>Welcome to the Latest Jobs page of SkillStart Jobs - your place to discover recently added beginner-friendly vacancies across Pakistan.</p>
+        <p>We regularly update this section with fresh openings for candidates looking for:</p>
+        <ul>
+          <li>Matric jobs</li>
+          <li>Intermediate jobs</li>
+          <li>Office jobs</li>
+          <li>Computer operator jobs</li>
+          <li>Data entry jobs</li>
+          <li>Customer support jobs</li>
+          <li>Private company jobs</li>
+          <li>Fresh candidate opportunities</li>
+        </ul>
+        <p>If you want to stay ahead of other applicants, checking the newest jobs regularly can increase your chances.</p>
+
+        <h2>Why Check Latest Jobs Daily?</h2>
+        <p>Many entry-level vacancies receive applications quickly. Some openings may stay active for only a few days.</p>
+        <p>By visiting our Latest Jobs page often, you can:</p>
+        <ul>
+          <li>Apply earlier than other candidates</li>
+          <li>Find recently posted opportunities</li>
+          <li>Discover beginner-friendly openings</li>
+          <li>Explore jobs by city or category</li>
+          <li>Improve chances of getting shortlisted</li>
+        </ul>
+
+        <h2>Jobs for Fresh Candidates</h2>
+        <p>We understand many users are starting their careers with little or no experience.</p>
+        <p>That is why we focus on roles suitable for:</p>
+        <ul>
+          <li>Fresh candidates</li>
+          <li>Students</li>
+          <li>Matric pass applicants</li>
+          <li>Intermediate pass candidates</li>
+          <li>Basic computer users</li>
+          <li>Office beginners</li>
+        </ul>
+
+        <h2>Popular Cities We Cover</h2>
+        <p>We aim to share opportunities from cities including:</p>
+        <ul>
+          <li>Lahore</li>
+          <li>Karachi</li>
+          <li>Islamabad</li>
+          <li>Rawalpindi</li>
+          <li>Faisalabad</li>
+          <li>and more across Pakistan</li>
+        </ul>
+
+        <h2>What Kind of Jobs Are Added Here?</h2>
+        <p><strong>Office Jobs</strong></p>
+        <p>Reception, assistant, filing, admin support.</p>
+        <p><strong>Computer Operator Jobs</strong></p>
+        <p>Typing, data handling, MS Word, records.</p>
+        <p><strong>Data Entry Jobs</strong></p>
+        <p>Beginner-friendly roles requiring basic typing skills.</p>
+        <p><strong>Customer Support Jobs</strong></p>
+        <p>Phone, WhatsApp, or front desk communication roles.</p>
+        <p><strong>Sales & Retail Jobs</strong></p>
+        <p>Store staff, sales assistants, branch support.</p>
+
+        <h2>Important Advice Before Applying</h2>
+        <p>Before applying to any job:</p>
+        <ul>
+          <li>Read requirements carefully</li>
+          <li>Confirm deadline dates</li>
+          <li>Prepare your CV</li>
+          <li>Verify employer details</li>
+          <li>Avoid suspicious payment requests</li>
+          <li>Apply only through trusted methods</li>
+        </ul>
+
+        <h2>Career Tips While You Search</h2>
+        <p>While checking latest jobs, also improve these skills:</p>
+        <ul>
+          <li>Basic computer knowledge</li>
+          <li>Email usage</li>
+          <li>CV writing</li>
+          <li>Communication skills</li>
+          <li>Interview confidence</li>
+          <li>Typing speed</li>
+        </ul>
+        <p>Small improvements can create bigger opportunities.</p>
+
+        <h2>Updated Opportunities Added Regularly</h2>
+        <p>We continue adding new job opportunities to help users stay informed. Bookmark this page and return often for fresh openings.</p>
+
+        <h2>Start Browsing Now</h2>
+        <p>Explore the newest vacancies below and take your next step with SkillStart Jobs.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="grid-jobs">
+        {jobs.map((job) => (
+          <JobCard
+            title={job.data.title}
+            company={job.data.company}
+            location={job.data.location}
+            education={job.data.education}
+            salary={job.data.salary}
+            postedDate={job.data.postedDate}
+            href={`/jobs/${job.slug}/eligibility/`}
+            image={getJobImage(job.slug)}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

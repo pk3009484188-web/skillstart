@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  excerpt: string;
+  href: string;
+  cover: string;
+  coverImage?: string;
+}
+
+const { title, excerpt, href, cover, coverImage } = Astro.props;
+---
+<article class="blog-card">
+  <a href={href} class="blog-cover" aria-label={`Read ${title}`}>
+    {coverImage ? (
+      <img
+        src={coverImage}
+        alt={title}
+        loading="lazy"
+        decoding="async"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80';"
+      />
+    ) : (
+      <span>{cover}</span>
+    )}
+  </a>
+  <div class="blog-body">
+    <h3>{title}</h3>
+    <p>{excerpt}</p>
+    <a href={href} class="btn-card">Read Guide</a>
+  </div>
+</article>

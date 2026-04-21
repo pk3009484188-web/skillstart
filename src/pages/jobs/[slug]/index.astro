@@ -1,0 +1,53 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const jobs = await getCollection("jobs", ({ data }) => data.active);
+  return jobs.map((job) => ({ params: { slug: job.slug }, props: { job } }));
+}
+
+const { job } = Astro.props;
+const { Content } = await render(job);
+---
+<BaseLayout title={`${job.data.title} - SkillStart Jobs`} description={job.data.summary}>
+  <script is:inline define:vars={{ slug: job.slug }}>
+    try {
+      const visited = sessionStorage.getItem(`eligibilityVisited:${slug}`) === "1";
+      if (!visited) {
+        window.location.replace(`/jobs/${slug}/eligibility/`);
+      }
+    } catch {}
+  </script>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> / Jobs / {job.data.title}</div>
+      <div class="eyebrow">Step 3 of 3</div>
+      <h1>{job.data.title}</h1>
+      <p>{job.data.company} | {job.data.location} | Salary {job.data.salary} | Posted {job.data.postedDate} | Deadline {job.data.deadline}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <article class="content-card">
+        <h2>Job Overview</h2>
+        <p>{job.data.summary}</p>
+        <div class="ad">Google AdSense in-content placeholder</div>
+        <Content />
+        <p><a class="btn-primary" href={job.data.applyUrl} rel="nofollow">Apply Now</a> <a class="btn-outline" href="/">Check More Jobs</a></p>
+      </article>
+
+      <aside class="side-card">
+        <h3 style="margin-top:0">Quick Summary</h3>
+        <p><strong>Education:</strong> {job.data.education}</p>
+        <p><strong>City:</strong> {job.data.location}</p>
+        <p><strong>Deadline:</strong> {job.data.deadline}</p>
+        <p><a class="btn-card" href={`/jobs/${job.slug}/eligibility/`}>Check Eligibility First</a></p>
+        <div class="ad">AdSense 300x250 placeholder</div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+

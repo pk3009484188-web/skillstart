@@ -1,0 +1,236 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import JobCard from "../components/JobCard.astro";
+import BlogCard from "../components/BlogCard.astro";
+import { categoryCards, getBlogImage, getJobImage, homeHeroImage } from "../data/unsplash";
+
+const jobs = (await getCollection("jobs", ({ data }) => data.active)).slice(0, 4);
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).slice(0, 4);
+---
+<BaseLayout
+  title="Latest Matric, Inter & Computer Jobs in Pakistan | Fresh Candidates Welcome"
+  description="Find latest Matric, Intermediate, office, data entry, and basic computer jobs in Pakistan. Beginner-friendly opportunities for fresh candidates with simple apply guidance."
+>
+  <section class="hero" style={`--hero-image: url('${homeHeroImage}')`}>
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Updated Daily</div>
+        <h1>Latest Jobs in Pakistan <em>Matric, Inter & Fresh Candidates</em></h1>
+        <p>Find latest jobs in Pakistan with simple guidance for Matric jobs, Inter jobs, fresh jobs, office jobs, computer operator jobs, and data entry jobs Pakistan candidates can apply for.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#featured-jobs">View Latest Jobs</a>
+          <a class="btn-outline" href="/blog/">Read Career Guides</a>
+        </div>
+      </div>
+      <aside class="search-card" aria-label="Quick search">
+        <h3>Find Jobs Fast</h3>
+        <form action="/latest-jobs/" method="get">
+          <label for="sTitle">Keyword</label>
+          <input id="sTitle" name="q" class="field" type="text" placeholder="Data entry, office assistant" />
+          <div class="row">
+            <div>
+              <label for="sCity">City</label>
+              <select id="sCity" name="city" class="select"><option>Lahore</option><option>Karachi</option><option>Islamabad</option></select>
+            </div>
+            <div>
+              <label for="sEdu">Education</label>
+              <select id="sEdu" name="education" class="select"><option>Matric</option><option>Intermediate</option></select>
+            </div>
+          </div>
+          <button class="search-submit" type="submit">Search Jobs</button>
+        </form>
+        <div class="ad">Google AdSense 300x250 placeholder</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Helping Fresh Candidates Find Real Job Opportunities</h2>
+        </div>
+      </div>
+      <div class="two-col">
+        <article class="content-card">
+          <p>Starting your career can feel confusing. Many candidates don&rsquo;t know where to apply, what skills are required, or which jobs match their education level.</p>
+          <p>We simplify that process by listing beginner-friendly jobs for:</p>
+          <ul>
+            <li>Matric pass candidates</li>
+            <li>Intermediate pass candidates</li>
+            <li>Fresh candidates</li>
+            <li>Office job seekers</li>
+            <li>Computer operator jobs</li>
+            <li>Data entry jobs</li>
+            <li>Customer support roles</li>
+            <li>Private company jobs</li>
+          </ul>
+          <p>Our goal is to help users find opportunities faster and apply with confidence.</p>
+        </article>
+        <aside class="side-card">
+          <h3 style="margin-top:0">Quick Focus Areas</h3>
+          <ul>
+            <li>Beginner-friendly private jobs in Lahore</li>
+            <li>Updated office jobs and support roles</li>
+            <li>Computer operator and data entry jobs Pakistan-wide</li>
+            <li>Clear eligibility and apply guidance</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="featured-jobs">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="eyebrow">Featured Jobs</div>
+          <h2>Top Beginner Roles</h2>
+        </div>
+        <a href="/latest-jobs/" class="btn-card">See All</a>
+      </div>
+      <div class="grid-jobs">
+        {jobs.map((job) => (
+          <JobCard
+            title={job.data.title}
+            company={job.data.company}
+            location={job.data.location}
+            education={job.data.education}
+            salary={job.data.salary}
+            postedDate={job.data.postedDate}
+            href={`/jobs/${job.slug}/eligibility/`}
+            image={getJobImage(job.slug)}
+          />
+        ))}
+      </div>
+      <div class="ad">Google AdSense leaderboard placeholder</div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Popular Job Categories</h2>
+        </div>
+      </div>
+      <div class="grid-categories">
+        {categoryCards.map((category) => (
+          <a class="cat-card" href={category.href} style={`--cat-image: url('${category.image}')`}>
+            <strong>{category.title}</strong><br /><small>{category.description}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <article class="content-card">
+          <h2 style="margin-top:0">Why Job Seekers Use Our Platform</h2>
+          <ul>
+            <li><strong>Easy to Understand Listings</strong> - We explain jobs in simple language.</li>
+            <li><strong>Beginner-Friendly Focus</strong> - Most listings are suitable for fresh candidates.</li>
+            <li><strong>Fast Eligibility Check</strong> - Quickly see if a job matches your profile.</li>
+            <li><strong>Updated Opportunities</strong> - New openings added regularly.</li>
+            <li><strong>Direct Apply Guidance</strong> - Get clear steps to apply properly.</li>
+          </ul>
+        </article>
+        <aside class="side-card">
+          <h3 style="margin-top:0">Who Can Apply</h3>
+          <p>We support candidates searching for latest jobs in Pakistan with clear filters by city, education, and role type.</p>
+          <ul>
+            <li>Matric jobs and Inter jobs</li>
+            <li>Fresh jobs in office and support departments</li>
+            <li>Computer operator jobs and entry-level private roles</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <article class="content-card">
+        <h2 style="margin-top:0">Jobs for Matric, Inter & Fresh Candidates in Pakistan</h2>
+        <p>Many employers in Pakistan hire candidates with basic qualifications for office support, data entry, reception, sales, warehouse, and computer-based roles.</p>
+        <p>If you have:</p>
+        <ul>
+          <li>Matric education</li>
+          <li>Intermediate education</li>
+          <li>Basic typing skills</li>
+          <li>Email knowledge</li>
+          <li>WhatsApp usage experience</li>
+          <li>Beginner computer skills</li>
+        </ul>
+        <p>You may qualify for many private sector opportunities.</p>
+        <p>We help connect job seekers with updated openings in cities like:</p>
+        <ul>
+          <li>Lahore</li>
+          <li>Karachi</li>
+          <li>Islamabad</li>
+          <li>Rawalpindi</li>
+          <li>Faisalabad</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Career Guides & Helpful Articles</h2>
+          <p>Read useful guides like:</p>
+          <ul>
+            <li>How to make a simple CV</li>
+            <li>How to apply for jobs online</li>
+            <li>Best jobs after Matric</li>
+            <li>Interview tips for fresh candidates</li>
+            <li>Basic computer skills for office jobs</li>
+          </ul>
+        </div>
+        <a href="/blog/" class="btn-card">Read More</a>
+      </div>
+      <div class="grid-blog">
+        {posts.map((post, idx) => (
+          <BlogCard
+            title={post.data.title}
+            excerpt={post.data.excerpt}
+            href={`/blog/${post.slug}/`}
+            cover={post.data.category.toUpperCase()}
+            coverImage={getBlogImage(post.data.featuredImage, post.data.category, idx)}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <h2 style="margin-top:0">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item"><div class="faq-q">Do I need experience? <span>+</span></div><div class="faq-a">Many listed jobs are suitable for fresh candidates.</div></div>
+          <div class="faq-item"><div class="faq-q">Can Matric pass candidates apply? <span>+</span></div><div class="faq-a">Yes, many jobs are open for Matric-qualified applicants.</div></div>
+          <div class="faq-item"><div class="faq-q">Are computer skills required? <span>+</span></div><div class="faq-a">For some roles, only basic computer knowledge is needed.</div></div>
+          <div class="faq-item"><div class="faq-q">How often are jobs updated? <span>+</span></div><div class="faq-a">New listings are added regularly.</div></div>
+          <div class="faq-item"><div class="faq-q">Is there any fee to browse jobs? <span>+</span></div><div class="faq-a">No, users can browse job listings freely.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
+      <div class="panel" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: #fff;">
+        <h2 style="margin-top:0; color:#fff;">Start Your Career Journey Today</h2>
+        <p>Browse the latest beginner-friendly jobs, improve your skills, and take the next step toward employment.</p>
+        <p><a class="btn-primary" href="#featured-jobs">View Latest Jobs</a> <a class="btn-outline" href="/blog/">Read Career Guides</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

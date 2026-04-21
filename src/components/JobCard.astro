@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  location: string;
+  education: string;
+  salary: string;
+  postedDate: string;
+  href: string;
+  image?: string;
+}
+
+const { title, company, location, education, salary, postedDate, href, image } = Astro.props;
+---
+<article class="job-card">
+  {image && (
+    <a class="job-card-media" href={href} aria-hidden="true" tabindex="-1">
+      <img src={image} alt={`${title} job`} loading="lazy" decoding="async" />
+    </a>
+  )}
+  <p class="meta">{location} | {education} | Posted {postedDate}</p>
+  <h3>{title}</h3>
+  <p class="meta">{company}</p>
+  <div class="job-footer">
+    <div class="salary">{salary}</div>
+    <a class="btn-card" href={href}>Check Eligibility</a>
+  </div>
+</article>

@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import JobCard from "../../components/JobCard.astro";
+import { getJobImage } from "../../data/unsplash";
+
+export async function getStaticPaths() {
+  return [{ params: { slug: "matric-jobs" } }];
+}
+
+const jobs = await getCollection("jobs", ({ data }) => data.active);
+---
+<BaseLayout title="Category - SkillStart Jobs" description="Browse beginner-friendly job categories.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> / Category</div>
+      <h1>Job Category</h1>
+      <p>Explore listings by education and skill level.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <article class="content-card" style="margin-bottom: 1rem;">
+        <p>Explore jobs by category to quickly find opportunities that match your skills, education, and interests. SkillStart Jobs organizes vacancies into easy sections such as Matric Jobs, Intermediate Jobs, Office Jobs, Computer Operator Jobs, Data Entry Jobs, Customer Support Jobs, and more.</p>
+        <p>Choose a category below to discover the latest openings across Pakistan and start applying faster.</p>
+      </article>
+      <div class="grid-jobs">
+        {jobs.map((job) => (
+          <JobCard
+            title={job.data.title}
+            company={job.data.company}
+            location={job.data.location}
+            education={job.data.education}
+            salary={job.data.salary}
+            postedDate={job.data.postedDate}
+            href={`/jobs/${job.slug}/eligibility/`}
+            image={getJobImage(job.slug)}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

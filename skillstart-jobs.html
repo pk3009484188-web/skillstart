@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillStart Jobs — Beginner-Friendly Jobs in Pakistan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A1628;
+    --navy-mid: #112240;
+    --navy-light: #1E3A5F;
+    --gold: #E8A020;
+    --gold-light: #F5C050;
+    --gold-pale: #FEF3C7;
+    --green: #1D7A5F;
+    --green-light: #22A27A;
+    --cream: #FDFAF5;
+    --white: #FFFFFF;
+    --gray-50: #F8F7F4;
+    --gray-100: #EEE9E0;
+    --gray-200: #D6CFC4;
+    --gray-400: #9B8E7E;
+    --gray-600: #5C5248;
+    --gray-900: #1A1410;
+    --red: #DC2626;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --shadow-sm: 0 2px 8px rgba(10,22,40,0.06);
+    --shadow-md: 0 8px 24px rgba(10,22,40,0.10);
+    --shadow-lg: 0 20px 48px rgba(10,22,40,0.14);
+    --shadow-gold: 0 8px 32px rgba(232,160,32,0.25);
+    --radius: 14px;
+    --radius-sm: 8px;
+    --radius-lg: 24px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--gray-900);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── HEADER ─────────────────────────────────── */
+  .header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10, 22, 40, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(232,160,32,0.15);
+    padding: 0 2rem;
+  }
+  .header-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: flex; align-items: center; gap: 2rem;
+    height: 68px;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.45rem;
+    color: var(--white);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem;
+    flex-shrink: 0;
+  }
+  .logo-dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:0.6;transform:scale(1.3)}
+  }
+  .logo span { color: var(--gold); }
+  nav { display: flex; gap: 0.25rem; flex: 1; }
+  nav a {
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  nav a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+  nav a.active { color: var(--gold); }
+  .header-search {
+    margin-left: auto;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .search-input-wrap {
+    display: flex; align-items: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 0.4rem 0.85rem;
+    gap: 0.5rem;
+  }
+  .search-input-wrap input {
+    background: none; border: none; outline: none;
+    color: var(--white); font-size: 0.85rem;
+    font-family: var(--font-body);
+    width: 180px;
+  }
+  .search-input-wrap input::placeholder { color: rgba(255,255,255,0.4); }
+  .search-icon { color: rgba(255,255,255,0.4); font-size: 0.9rem; }
+  .btn-post {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .btn-post:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* ─── HERO ─────────────────────────────────── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #0D2137 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 2rem 4rem;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232,160,32,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(29,122,95,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(232,160,32,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,160,32,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1280px; margin: 0 auto;
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(232,160,32,0.15);
+    border: 1px solid rgba(232,160,32,0.3);
+    color: var(--gold-light);
+    font-size: 0.78rem; font-weight: 600;
+    padding: 0.35rem 0.85rem; border-radius: 100px;
+    margin-bottom: 1.5rem;
+    animation: fadeSlideDown 0.6s ease both;
+  }
+  .live-dot {
+    width: 6px; height: 6px;
+    background: #22C55E; border-radius: 50%;
+    animation: pulse-dot 1.5s infinite;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    animation: fadeSlideDown 0.6s ease 0.1s both;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+    display: block;
+  }
+  .hero p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    animation: fadeSlideDown 0.6s ease 0.2s both;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeSlideDown 0.6s ease 0.3s both;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    padding: 0.85rem 1.75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.25s;
+    box-shadow: var(--shadow-gold);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(232,160,32,0.35); }
+  .btn-outline {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.25s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.35); }
+
+  /* Hero Stats */
+  .hero-stats {
+    display: flex; gap: 2rem; margin-top: 2.5rem;
+    animation: fadeSlideDown 0.6s ease 0.4s both;
+  }
+  .stat { }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 1.8rem; font-weight: 900;
+    color: var(--white); line-height: 1;
+  }
+  .stat-num span { color: var(--gold); }
+  .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+
+  /* Hero Search Card */
+  .hero-search-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-lg);
+    animation: fadeSlideUp 0.7s ease 0.2s both;
+  }
+  .search-card-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 1.25rem;
+  }
+  .search-fields { display: flex; flex-direction: column; gap: 0.75rem; }
+  .field-group { display: flex; flex-direction: column; gap: 0.3rem; }
+  .field-label { font-size: 0.75rem; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.05em; }
+  .field-input {
+    border: 1.5px solid var(--gray-100);
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--gray-900);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .field-input:focus { border-color: var(--gold); }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .btn-search {
+    width: 100%; background: var(--navy);
+    color: var(--white); font-weight: 700;
+    padding: 0.8rem; border-radius: 8px;
+    border: none; cursor: pointer;
+    font-family: var(--font-body); font-size: 0.95rem;
+    margin-top: 0.5rem; transition: all 0.2s;
+  }
+  .btn-search:hover { background: var(--navy-light); transform: translateY(-1px); }
+  .popular-tags { margin-top: 1rem; }
+  .popular-tags p { font-size: 0.75rem; color: var(--gray-400); margin-bottom: 0.5rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag {
+    background: var(--gray-50); border: 1px solid var(--gray-100);
+    color: var(--gray-600); font-size: 0.75rem; font-weight: 500;
+    padding: 0.3rem 0.65rem; border-radius: 100px; cursor: pointer;
+    transition: all 0.15s; text-decoration: none;
+  }
+  .tag:hover { background: var(--gold-pale); border-color: var(--gold); color: var(--navy); }
+
+  /* ─── AD BANNER ─────────────────────────── */
+  .ad-banner {
+    background: linear-gradient(90deg, var(--gray-50), var(--gray-100), var(--gray-50));
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+    padding: 0.85rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+  .ad-label {
+    position: absolute; top: 50%; left: 1rem;
+    transform: translateY(-50%);
+    font-size: 0.65rem; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
+  }
+  .ad-placeholder {
+    display: flex; align-items: center; justify-content: center;
+    height: 60px; color: var(--gray-400); font-size: 0.8rem;
+    border: 1.5px dashed var(--gray-200); border-radius: 6px;
+    max-width: 728px; margin: 0 auto;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px);
+  }
+
+  /* ─── SECTIONS ─────────────────────────────────── */
+  section { padding: 4rem 2rem; }
+  .section-inner { max-width: 1280px; margin: 0 auto; }
+  .section-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 2.25rem; gap: 1rem;
+  }
+  .section-eyebrow {
+    font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gold); margin-bottom: 0.4rem;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700; color: var(--navy); line-height: 1.2;
+  }
+  .view-all {
+    font-size: 0.85rem; font-weight: 600;
+    color: var(--green); text-decoration: none;
+    display: flex; align-items: center; gap: 0.35rem;
+    white-space: nowrap; transition: gap 0.2s;
+  }
+  .view-all:hover { gap: 0.6rem; }
+
+  /* ─── JOB CARDS ─────────────────────────── */
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem;
+  }
+  .job-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.25s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .job-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: var(--gold);
+    transform: scaleY(0); transform-origin: bottom;
+    transition: transform 0.25s;
+  }
+  .job-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--gray-200); }
+  .job-card:hover::before { transform: scaleY(1); }
+  .job-card.featured { border-color: rgba(232,160,32,0.3); background: linear-gradient(135deg, var(--white) 80%, var(--gold-pale)); }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+  .company-logo {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; font-weight: 900;
+    flex-shrink: 0;
+  }
+  .logo-blue { background: #DBEAFE; color: #1D4ED8; }
+  .logo-green { background: #DCFCE7; color: #15803D; }
+  .logo-purple { background: #EDE9FE; color: #6D28D9; }
+  .logo-red { background: #FEE2E2; color: #DC2626; }
+  .logo-orange { background: #FFEDD5; color: #C2410C; }
+  .logo-teal { background: #CCFBF1; color: #0F766E; }
+  .card-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    font-size: 0.7rem; font-weight: 700;
+    padding: 0.25rem 0.6rem; border-radius: 100px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .badge-featured { background: var(--gold-pale); color: var(--navy); border: 1px solid rgba(232,160,32,0.3); }
+  .badge-new { background: #DCFCE7; color: #15803D; }
+  .badge-urgent { background: #FEE2E2; color: #DC2626; }
+  .job-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 0.3rem;
+    line-height: 1.3;
+  }
+  .job-company { font-size: 0.82rem; color: var(--gray-600); margin-bottom: 0.85rem; }
+  .job-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.1rem; }
+  .meta-item {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    font-size: 0.78rem; color: var(--gray-600); font-weight: 500;
+  }
+  .meta-icon { font-size: 0.85rem; }
+  .job-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 1rem; border-top: 1px solid var(--gray-100);
+    gap: 0.75rem;
+  }
+  .salary {
+    font-family: var(--font-display);
+    font-size: 1rem; font-weight: 700;
+    color: var(--green);
+  }
+  .btn-eligibility {
+    background: var(--navy);
+    color: var(--white);
+    font-size: 0.78rem; font-weight: 700;
+    padding: 0.45rem 0.9rem;
+    border-radius: 7px; border: none; cursor: pointer;
+    font-family: var(--font-body);
+    transition: all 0.2s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-eligibility:hover { background: var(--navy-light); transform: translateY(-1px); }
+  .deadline { font-size: 0.72rem; color: var(--red); font-weight: 600; }
+
+  /* ─── CATEGORIES ─────────────────────────── */
+  .categories-section { background: var(--navy); }
+  .categories-section .section-title { color: var(--white); }
+  .categories-section .section-eyebrow { color: var(--gold); }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .category-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.25rem;
+    cursor: pointer; transition: all 0.25s;
+    text-decoration: none; display: block;
+  }
+  .category-card:hover {
+    background: rgba(232,160,32,0.1);
+    border-color: rgba(232,160,32,0.3);
+    transform: translateY(-3px);
+  }
+  .cat-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+  .cat-name { font-weight: 700; color: var(--white); font-size: 0.95rem; margin-bottom: 0.3rem; }
+  .cat-count { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+
+  /* ─── BLOG ─────────────────────────── */
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+  .blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .blog-img {
+    height: 170px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; font-weight: 900;
+    font-family: var(--font-display);
+    position: relative; overflow: hidden;
+  }
+  .blog-img-1 { background: linear-gradient(135deg, #1E3A5F, #0A1628); color: var(--gold); }
+  .blog-img-2 { background: linear-gradient(135deg, #1D7A5F, #0D4D3A); color: var(--gold-light); }
+  .blog-img-3 { background: linear-gradient(135deg, #7C3AED, #4C1D95); color: #DDD6FE; }
+  .blog-cat-tag {
+    position: absolute; top: 0.75rem; left: 0.75rem;
+    background: rgba(0,0,0,0.35); backdrop-filter: blur(4px);
+    color: var(--white); font-size: 0.68rem; font-weight: 700;
+    padding: 0.25rem 0.55rem; border-radius: 100px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .blog-body { padding: 1.25rem; }
+  .blog-meta { font-size: 0.73rem; color: var(--gray-400); margin-bottom: 0.6rem; display: flex; gap: 0.75rem; }
+  .blog-title {
+    font-family: var(--font-display);
+    font-size: 1rem; font-weight: 700;
+    color: var(--navy); line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+  .blog-excerpt { font-size: 0.82rem; color: var(--gray-600); line-height: 1.6; }
+  .blog-read-more { font-size: 0.78rem; font-weight: 700; color: var(--green); margin-top: 0.85rem; display: inline-block; }
+
+  /* ─── WHY SECTION ─────────────────────────── */
+  .why-section { background: var(--gray-50); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .why-image-area {
+    background: linear-gradient(135deg, var(--navy), #1E3A5F);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    color: var(--white);
+    position: relative; overflow: hidden;
+  }
+  .why-image-area::after {
+    content: '💼';
+    position: absolute; right: -0.5rem; bottom: -0.5rem;
+    font-size: 8rem; opacity: 0.08;
+  }
+  .why-headline {
+    font-family: var(--font-display);
+    font-size: 1.75rem; font-weight: 900;
+    line-height: 1.2; margin-bottom: 1.25rem;
+  }
+  .why-headline em { font-style: italic; color: var(--gold); }
+  .why-mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .mini-stat {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 1rem;
+  }
+  .mini-stat-num {
+    font-family: var(--font-display);
+    font-size: 1.5rem; font-weight: 900;
+    color: var(--gold); margin-bottom: 0.2rem;
+  }
+  .mini-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+  .why-list { display: flex; flex-direction: column; gap: 1.25rem; }
+  .why-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .why-icon-wrap {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+    background: var(--gold-pale); border: 1px solid rgba(232,160,32,0.2);
+  }
+  .why-item-title { font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; font-size: 0.95rem; }
+  .why-item-text { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
+
+  /* ─── ELIGIBILITY PAGE PREVIEW ─────────────── */
+  .eligibility-preview {
+    background: linear-gradient(135deg, var(--cream) 60%, var(--gold-pale));
+    border: 1px solid var(--gray-100);
+  }
+  .eligibility-demo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    align-items: center;
+  }
+  .eli-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .eli-card-header {
+    background: var(--navy); padding: 1.25rem 1.5rem;
+  }
+  .eli-job-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+  .eli-meta { display: flex; gap: 1rem; }
+  .eli-meta-item { font-size: 0.78rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 0.3rem; }
+  .eli-body { padding: 1.5rem; }
+  .eli-subtitle { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray-400); margin-bottom: 1rem; }
+  .checklist { display: flex; flex-direction: column; gap: 0.65rem; }
+  .check-item {
+    display: flex; align-items: center; gap: 0.85rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 8px; border: 1.5px solid var(--gray-100);
+    cursor: pointer; transition: all 0.2s;
+    font-size: 0.85rem; color: var(--gray-600); font-weight: 500;
+  }
+  .check-item.checked {
+    background: #F0FDF4; border-color: #86EFAC; color: #15803D;
+  }
+  .check-box {
+    width: 20px; height: 20px; border-radius: 5px;
+    border: 2px solid var(--gray-200);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: all 0.2s; font-size: 0.7rem;
+  }
+  .check-item.checked .check-box { background: #22C55E; border-color: #22C55E; color: white; }
+  .eli-result {
+    margin-top: 1.25rem; padding: 1rem;
+    background: #F0FDF4; border: 1px solid #86EFAC;
+    border-radius: 8px; text-align: center;
+  }
+  .eli-result-emoji { font-size: 1.5rem; margin-bottom: 0.3rem; }
+  .eli-result-text { font-weight: 700; color: #15803D; font-size: 0.9rem; }
+  .eli-result-sub { font-size: 0.78rem; color: #166534; margin-top: 0.2rem; }
+  .eli-cta { margin-top: 1rem; }
+  .btn-full {
+    width: 100%; padding: 0.8rem; border-radius: 8px;
+    background: var(--navy); color: var(--white); font-weight: 700;
+    border: none; cursor: pointer; font-family: var(--font-body); font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  .btn-full:hover { background: var(--navy-light); }
+  .eli-explain { }
+  .eli-explain h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 1rem; line-height: 1.3;
+  }
+  .eli-explain p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1.25rem; }
+  .funnel-steps { display: flex; flex-direction: column; gap: 0.75rem; }
+  .funnel-step { display: flex; align-items: center; gap: 0.85rem; }
+  .step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--navy); color: var(--white);
+    font-size: 0.8rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-text { font-size: 0.85rem; color: var(--gray-600); font-weight: 500; }
+
+  /* ─── FAQ ─────────────────────────── */
+  .faq-section { background: var(--white); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .faq-item {
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .faq-item:hover { border-color: var(--gold); background: var(--gold-pale); }
+  .faq-q { font-weight: 700; color: var(--navy); font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; justify-content: space-between; gap: 0.75rem; }
+  .faq-icon { color: var(--gold); font-size: 1rem; flex-shrink: 0; }
+  .faq-a { font-size: 0.83rem; color: var(--gray-600); line-height: 1.6; }
+
+  /* ─── NEWSLETTER ─────────────────────────── */
+  .newsletter-section { background: var(--navy); padding: 3.5rem 2rem; }
+  .newsletter-inner {
+    max-width: 600px; margin: 0 auto;
+    text-align: center;
+  }
+  .newsletter-inner h2 {
+    font-family: var(--font-display);
+    font-size: 1.85rem; font-weight: 900;
+    color: var(--white); margin-bottom: 0.75rem;
+  }
+  .newsletter-inner h2 em { font-style: italic; color: var(--gold); }
+  .newsletter-inner p { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .newsletter-form { display: flex; gap: 0.75rem; }
+  .newsletter-input {
+    flex: 1; padding: 0.8rem 1rem;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 10px; background: rgba(255,255,255,0.07);
+    color: var(--white); font-family: var(--font-body); font-size: 0.9rem;
+    outline: none; transition: border-color 0.2s;
+  }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.3); }
+  .newsletter-input:focus { border-color: var(--gold); }
+  .btn-subscribe {
+    background: var(--gold); color: var(--navy);
+    font-weight: 700; padding: 0.8rem 1.5rem;
+    border-radius: 10px; border: none; cursor: pointer;
+    font-family: var(--font-body); font-size: 0.9rem;
+    white-space: nowrap; transition: all 0.2s;
+  }
+  .btn-subscribe:hover { background: var(--gold-light); }
+
+  /* ─── FOOTER ─────────────────────────── */
+  footer {
+    background: #060E1A;
+    padding: 3rem 2rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+    gap: 2.5rem; margin-bottom: 2.5rem;
+  }
+  .footer-logo { font-family: var(--font-display); font-size: 1.35rem; font-weight: 900; color: var(--white); margin-bottom: 0.85rem; }
+  .footer-logo span { color: var(--gold); }
+  .footer-about { font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 1.25rem; }
+  .footer-socials { display: flex; gap: 0.5rem; }
+  .social-btn {
+    width: 34px; height: 34px; border-radius: 7px;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.5); font-size: 0.85rem; text-decoration: none;
+    transition: all 0.2s; cursor: pointer;
+  }
+  .social-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .footer-col h4 { font-weight: 700; color: var(--white); font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.02em; }
+  .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
+  .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin-bottom: 1.25rem; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+  .footer-legal { display: flex; gap: 1.25rem; }
+  .footer-legal a { font-size: 0.75rem; color: rgba(255,255,255,0.25); text-decoration: none; transition: color 0.2s; }
+  .footer-legal a:hover { color: rgba(255,255,255,0.55); }
+
+  /* ─── ANIMATIONS ─────────────────────────── */
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── SCROLL ANIMATION ─────────────────────── */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── TICKER ─────────────────────────────── */
+  .ticker-bar {
+    background: var(--gold);
+    padding: 0.55rem 2rem;
+    overflow: hidden; position: relative;
+  }
+  .ticker-label {
+    display: inline-block;
+    font-size: 0.78rem; font-weight: 700;
+    color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em;
+    background: var(--navy); color: var(--gold);
+    padding: 0.15rem 0.6rem; border-radius: 3px;
+    margin-right: 1.5rem; flex-shrink: 0;
+  }
+  .ticker-track {
+    display: flex; gap: 3rem; animation: ticker 22s linear infinite;
+  }
+  .ticker-item { font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; display: flex; align-items: center; gap: 0.6rem; }
+  .ticker-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--navy); opacity: 0.4; }
+  @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+  /* ─── JOB DETAIL PAGE PREVIEW ────────────── */
+  .job-detail-preview { background: var(--gray-50); }
+  .detail-demo {
+    display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;
+  }
+  .detail-main {
+    background: var(--white); border-radius: var(--radius-lg);
+    overflow: hidden; border: 1px solid var(--gray-100);
+  }
+  .detail-header {
+    background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+    padding: 2rem; position: relative; overflow: hidden;
+  }
+  .detail-header::after {
+    content: '💻';
+    position: absolute; right: 1.5rem; top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem; opacity: 0.15;
+  }
+  .detail-company-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+  .detail-company-logo {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: rgba(255,255,255,0.15); display: flex;
+    align-items: center; justify-content: center; font-size: 1.4rem;
+  }
+  .detail-company-name { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+  .detail-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem; font-weight: 900;
+    color: var(--white); margin-bottom: 1rem; line-height: 1.2;
+  }
+  .detail-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .detail-tag {
+    background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.75);
+    font-size: 0.75rem; font-weight: 600;
+    padding: 0.3rem 0.7rem; border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .detail-body { padding: 2rem; }
+  .detail-section { margin-bottom: 1.75rem; }
+  .detail-section-title {
+    font-weight: 700; color: var(--navy); font-size: 0.95rem;
+    margin-bottom: 0.75rem; padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-100);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .detail-section-icon { font-size: 1rem; }
+  .detail-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .detail-list li {
+    font-size: 0.85rem; color: var(--gray-600); line-height: 1.5;
+    display: flex; align-items: flex-start; gap: 0.6rem;
+  }
+  .detail-list li::before { content: '→'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+  .apply-box {
+    background: var(--white); border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-100); overflow: hidden;
+    position: sticky; top: 80px; height: fit-content;
+  }
+  .apply-box-header { background: var(--navy); padding: 1.25rem 1.5rem; }
+  .apply-salary {
+    font-family: var(--font-display);
+    font-size: 1.65rem; font-weight: 900; color: var(--gold);
+  }
+  .apply-salary-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-bottom: 0.25rem; }
+  .apply-body { padding: 1.25rem 1.5rem; }
+  .apply-meta { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+  .apply-meta-row { display: flex; gap: 0.6rem; align-items: flex-start; }
+  .apply-meta-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .apply-meta-text { }
+  .apply-meta-label { font-size: 0.7rem; color: var(--gray-400); font-weight: 600; text-transform: uppercase; }
+  .apply-meta-value { font-size: 0.85rem; color: var(--navy); font-weight: 600; }
+  .btn-apply {
+    width: 100%; background: var(--gold); color: var(--navy);
+    font-weight: 700; padding: 0.9rem; border-radius: 8px;
+    border: none; cursor: pointer; font-family: var(--font-body); font-size: 0.95rem;
+    margin-bottom: 0.6rem; transition: all 0.2s;
+  }
+  .btn-apply:hover { background: var(--gold-light); }
+  .btn-save {
+    width: 100%; background: transparent; color: var(--navy);
+    font-weight: 600; padding: 0.8rem; border-radius: 8px;
+    border: 1.5px solid var(--gray-200); cursor: pointer;
+    font-family: var(--font-body); font-size: 0.88rem; transition: all 0.2s;
+  }
+  .btn-save:hover { border-color: var(--navy); }
+
+  /* ─── AD IN CONTENT ─────────────────────── */
+  .ad-mid {
+    background: repeating-linear-gradient(45deg, var(--gray-50), var(--gray-50) 10px, #F5F2EC 10px, #F5F2EC 20px);
+    border: 1.5px dashed var(--gray-200);
+    border-radius: 8px; padding: 1.25rem;
+    text-align: center; color: var(--gray-400); font-size: 0.78rem;
+    margin: 1.5rem 0;
+    position: relative;
+  }
+  .ad-mid::before { content: 'Advertisement'; position: absolute; top: 0.5rem; left: 50%; transform: translateX(-50%); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* ─── RESPONSIVE ─────────────────────────── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-search-card { display: none; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .why-grid, .eligibility-demo, .detail-demo, .faq-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .header-search { display: none; }
+    nav { display: none; }
+  }
+
+  /* ─── FLOATING CTA ─────────────────────────── */
+  .floating-cta {
+    position: fixed; bottom: 1.5rem; right: 1.5rem;
+    background: var(--navy); color: var(--white);
+    border-radius: 100px; padding: 0.75rem 1.25rem;
+    display: flex; align-items: center; gap: 0.5rem;
+    box-shadow: var(--shadow-lg);
+    font-size: 0.85rem; font-weight: 700;
+    cursor: pointer; z-index: 50;
+    animation: float 3s ease-in-out infinite;
+    text-decoration: none;
+  }
+  @keyframes float {
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-5px)}
+  }
+  .floating-cta:hover { background: var(--gold); color: var(--navy); }
+
+  /* ─── PAGE INDICATOR ─────────────────────────── */
+  .page-section-label {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 2rem;
+    background: var(--gray-50); border-bottom: 1px solid var(--gray-100);
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gray-400);
+  }
+  .page-section-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-100); }
+
+  select.field-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239B8E7E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.8rem center; padding-right: 2rem; }
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ────────────────────────────────────── -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      Skill<span>Start</span> Jobs
+    </a>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#jobs">Latest Jobs</a>
+      <a href="#categories">Categories</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-search">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search jobs...">
+      </div>
+      <a href="#" class="btn-post">Post a Job</a>
+    </div>
+  </div>
+</header>
+
+<!-- ─── TICKER ──────────────────────────────────── -->
+<div class="ticker-bar">
+  <div style="display:flex;align-items:center;gap:1rem;overflow:hidden">
+    <span class="ticker-label">🔴 Live</span>
+    <div class="ticker-track">
+      <span class="ticker-item">📋 Data Entry Operator — Lahore <span class="ticker-dot"></span></span>
+      <span class="ticker-item">💼 Office Assistant — Karachi <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🖥️ Computer Operator — Islamabad <span class="ticker-dot"></span></span>
+      <span class="ticker-item">📞 Customer Support — Remote <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🏢 Receptionist — Lahore <span class="ticker-dot"></span></span>
+      <span class="ticker-item">📋 Data Entry Operator — Lahore <span class="ticker-dot"></span></span>
+      <span class="ticker-item">💼 Office Assistant — Karachi <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🖥️ Computer Operator — Islamabad <span class="ticker-dot"></span></span>
+      <span class="ticker-item">📞 Customer Support — Remote <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🏢 Receptionist — Lahore <span class="ticker-dot"></span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── HERO ────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="live-dot"></span>
+        Updated Daily — 47 New Jobs Today
+      </div>
+      <h1>
+        Find Your First Job
+        <em>in Pakistan.</em>
+      </h1>
+      <p>Beginner-friendly jobs for Matric & Intermediate pass candidates. No experience? No problem. We find opportunities that match where you are right now.</p>
+      <div class="hero-cta">
+        <a href="#jobs" class="btn-primary">Browse Latest Jobs →</a>
+        <a href="#blog" class="btn-outline">Read Career Guides</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">2,400<span>+</span></div>
+          <div class="stat-label">Active Jobs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">38<span>+</span></div>
+          <div class="stat-label">Cities Covered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">180K<span>+</span></div>
+          <div class="stat-label">Monthly Visitors</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-search-card">
+      <div class="search-card-title">🔍 Find Your Job</div>
+      <div class="search-fields">
+        <div class="field-group">
+          <label class="field-label">Job Title / Keyword</label>
+          <input class="field-input" type="text" placeholder="e.g. Data Entry, Office Boy">
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label">City</label>
+            <select class="field-input">
+              <option>All Cities</option>
+              <option>Lahore</option>
+              <option>Karachi</option>
+              <option>Islamabad</option>
+              <option>Rawalpindi</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Education</label>
+            <select class="field-input">
+              <option>Any</option>
+              <option>Matric</option>
+              <option>Intermediate</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-search">Search Jobs</button>
+      </div>
+      <div class="popular-tags">
+        <p>Popular searches:</p>
+        <div class="tags">
+          <a href="#" class="tag">Matric</a>
+          <a href="#" class="tag">Data Entry</a>
+          <a href="#" class="tag">Remote</a>
+          <a href="#" class="tag">Office</a>
+          <a href="#" class="tag">Fresh</a>
+          <a href="#" class="tag">Government</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AD AFTER HERO ────────────────────────────── -->
+<div class="ad-banner">
+  <span class="ad-label">Ad</span>
+  <div class="ad-placeholder">— Google AdSense 728×90 Leaderboard —</div>
+</div>
+
+<!-- ─── FEATURED JOBS ────────────────────────────── -->
+<div class="page-section-label">📌 Homepage — Featured Jobs Section</div>
+<section id="jobs">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">Latest Opportunities</div>
+        <div class="section-title">Featured Jobs Today</div>
+      </div>
+      <a href="#" class="view-all">View All Jobs →</a>
+    </div>
+    <div class="jobs-grid">
+
+      <!-- Card 1 -->
+      <div class="job-card featured reveal">
+        <div class="card-top">
+          <div class="company-logo logo-blue">DE</div>
+          <div class="card-badges">
+            <span class="badge badge-featured">⭐ Featured</span>
+            <span class="badge badge-new">🆕 New</span>
+          </div>
+        </div>
+        <div class="job-title">Data Entry Operator</div>
+        <div class="job-company">Private Tech Company</div>
+        <div class="job-meta">
+          <span class="meta-item"><span class="meta-icon">📍</span> Lahore</span>
+          <span class="meta-item"><span class="meta-icon">🎓</span> Matric / Inter</span>
+          <span class="meta-item"><span class="meta-icon">🕐</span> Full Time</span>
+          <span class="meta-item"><span class="meta-icon">📅</span> Posted Today</span>
+        </div>
+        <div class="job-footer">
+          <div>
+            <div class="salary">35,000 – 45,000 PKR</div>
+            <div class="deadline">Deadline: Apr 30, 2026</div>
+          </div>
+          <a href="#eligibility" class="btn-eligibility">Check Eligibility</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="job-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-green">OA</div>
+          <div class="card-badges">
+            <span class="badge badge-urgent">🔴 Urgent</span>
+          </div>
+        </div>
+        <div class="job-title">Office Assistant</div>
+        <div class="job-company">Government Department</div>
+        <div class="job-meta">
+          <span class="meta-item"><span class="meta-icon">📍</span> Karachi</span>
+          <span class="meta-item"><span class="meta-icon">🎓</span> Matric</span>
+          <span class="meta-item"><span class="meta-icon">🕐</span> Full Time</span>
+          <span class="meta-item"><span class="meta-icon">📅</span> 2 Days Ago</span>
+        </div>
+        <div class="job-footer">
+          <div>
+            <div class="salary">28,000 – 38,000 PKR</div>
+            <div class="deadline">Deadline: Apr 25, 2026</div>
+          </div>
+          <a href="#eligibility" class="btn-eligibility">Check Eligibility</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="job-card featured reveal">
+        <div class="card-top">
+          <div class="company-logo logo-purple">CS</div>
+          <div class="card-badges">
+            <span class="badge badge-featured">⭐ Featured</span>
+          </div>
+        </div>
+        <div class="job-title">Customer Support Rep</div>
+        <div class="job-company">E-Commerce Startup</div>
+        <div class="job-meta">
+          <span class="meta-item"><span class="meta-icon">🌐</span> Remote</span>
+          <span class="meta-item"><span class="meta-icon">🎓</span> Intermediate</span>
+          <span class="meta-item"><span class="meta-icon">🕐</span> Part Time</span>
+          <span class="meta-item"><span class="meta-icon">📅</span> 1 Day Ago</span>
+        </div>
+        <div class="job-footer">
+          <div>
+            <div class="salary">20,000 – 30,000 PKR</div>
+            <div class="deadline">Deadline: May 5, 2026</div>
+          </div>
+          <a href="#eligibility" class="btn-eligibility">Check Eligibility</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="job-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-red">CO</div>
+          <div class="card-badges">
+            <span class="badge badge-new">🆕 New</span>
+          </div>
+        </div>
+        <div class="job-title">Computer Operator</div>
+        <div class="job-company">Bank / Financial Firm</div>
+        <div class="job-meta">
+          <span class="meta-item"><span class="meta-icon">📍</span> Islamabad</span>
+          <span class="meta-item"><span class="meta-icon">🎓</span> Intermediate</span>
+          <span class="meta-item"><span class="meta-icon">🕐</span> Full Time</span>
+          <span class="meta-item"><span class="meta-icon">📅</span> Today</span>
+        </div>
+        <div class="job-footer">
+          <div>
+            <div class="salary">40,000 – 55,000 PKR</div>
+            <div class="deadline">Deadline: May 10, 2026</div>
+          </div>
+          <a href="#eligibility" class="btn-eligibility">Check Eligibility</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="job-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-orange">RE</div>
+          <div class="card-badges"></div>
+        </div>
+        <div class="job-title">Receptionist / Front Desk</div>
+        <div class="job-company">Medical Clinic</div>
+        <div class="job-meta">
+          <span class="meta-item"><span class="meta-icon">📍</span> Lahore</span>
+          <span class="meta-item"><span class="meta-icon">🎓</span> Matric</span>
+          <span class="meta-item"><span class="meta-icon">🕐</span> Full Time</span>
+          <span class="meta-item"><span class="meta-icon">📅</span> 3 Days Ago</span>
+        </div>
+        <div class="job-footer">
+          <div>
+            <div class="salary">25,000 – 35,000 PKR</div>
+            <div class="deadline">Deadline: Apr 28, 2026</div>
+          </div>
+          <a href="#eligibility" class="btn-eligibility">Check Eligibility</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="job-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-teal">WP</div>
+          <div class="card-badges">
+            <span class="badge badge-featured">⭐ Featured</span>
+          </div>
+        </div>
+        <div class="job-title">WhatsApp Marketing Exec</div>
+        <div class="job-company">Digital Agency</div>
+        <div class="job-meta">
+          <span class="meta-item"><span class="meta-icon">🌐</span> Remote</span>
+          <span class="meta-item"><span class="meta-icon">🎓</span> Matric</span>
+          <span class="meta-item"><span class="meta-icon">🕐</span> Flexible</span>
+          <span class="meta-item"><span class="meta-icon">📅</span> Today</span>
+        </div>
+        <div class="job-footer">
+          <div>
+            <div class="salary">18,000 – 25,000 PKR</div>
+            <div class="deadline">Deadline: May 1, 2026</div>
+          </div>
+          <a href="#eligibility" class="btn-eligibility">Check Eligibility</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── AD AFTER JOBS ────────────────────────────── -->
+<div class="ad-banner">
+  <span class="ad-label">Ad</span>
+  <div class="ad-placeholder">— Google AdSense 728×90 Leaderboard —</div>
+</div>
+
+<!-- ─── CATEGORIES ────────────────────────────────── -->
+<div class="page-section-label">📂 Homepage — Job Categories Section</div>
+<section id="categories" class="categories-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">Browse by Type</div>
+        <div class="section-title" style="color:white">Explore Job Categories</div>
+      </div>
+      <a href="#" class="view-all" style="color:rgba(255,255,255,0.5)">All Categories →</a>
+    </div>
+    <div class="categories-grid">
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">📋</span>
+        <div class="cat-name">Matric Jobs</div>
+        <div class="cat-count">842 Jobs Available</div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">🎓</span>
+        <div class="cat-name">Intermediate Jobs</div>
+        <div class="cat-count">614 Jobs Available</div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">🖥️</span>
+        <div class="cat-name">Computer Operator</div>
+        <div class="cat-count">318 Jobs Available</div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">💼</span>
+        <div class="cat-name">Office Jobs</div>
+        <div class="cat-count">476 Jobs Available</div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">🏙️</span>
+        <div class="cat-name">Lahore Jobs</div>
+        <div class="cat-count">521 Jobs Available</div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">🌐</span>
+        <div class="cat-name">Remote / Online</div>
+        <div class="cat-count">203 Jobs Available</div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">🏛️</span>
+        <div class="cat-name">Government Jobs</div>
+        <div class="cat-count">129 Jobs Available</div>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="cat-icon">📞</span>
+        <div class="cat-name">Customer Support</div>
+        <div class="cat-count">267 Jobs Available</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BLOG ────────────────────────────────────── -->
+<div class="page-section-label">📝 Homepage — Blog / Career Guides Section</div>
+<section id="blog">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">Career Guides</div>
+        <div class="section-title">Learn & Grow</div>
+      </div>
+      <a href="#" class="view-all">All Articles →</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-img blog-img-1">
+          <span class="blog-cat-tag">Career Guide</span>
+          CV
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>📅 Apr 18, 2026</span>
+            <span>⏱ 5 min read</span>
+          </div>
+          <div class="blog-title">How to Write a Simple CV for Your First Job in Pakistan</div>
+          <div class="blog-excerpt">A step-by-step guide to creating a professional resume even if you have zero experience. Includes free template download.</div>
+          <a href="#" class="blog-read-more">Read Article →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-img blog-img-2">
+          <span class="blog-cat-tag">Interview Tips</span>
+          💬
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>📅 Apr 15, 2026</span>
+            <span>⏱ 4 min read</span>
+          </div>
+          <div class="blog-title">Top 10 Interview Questions for Matric Pass Candidates</div>
+          <div class="blog-excerpt">Practice answers for the most common questions you'll face in entry-level job interviews across Pakistan.</div>
+          <a href="#" class="blog-read-more">Read Article →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-img blog-img-3">
+          <span class="blog-cat-tag">Skills</span>
+          💡
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>📅 Apr 12, 2026</span>
+            <span>⏱ 6 min read</span>
+          </div>
+          <div class="blog-title">5 Basic Computer Skills That Will Get You Hired Faster</div>
+          <div class="blog-excerpt">You don't need a degree. These five basic skills are what most employers actually check for in entry-level computer operator roles.</div>
+          <a href="#" class="blog-read-more">Read Article →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AD MID PAGE ────────────────────────────── -->
+<div class="ad-banner">
+  <span class="ad-label">Ad</span>
+  <div class="ad-placeholder">— Google AdSense 728×90 Leaderboard —</div>
+</div>
+
+<!-- ─── WHY US ────────────────────────────────────── -->
+<div class="page-section-label">✅ Homepage — Why Use This Site Section</div>
+<section id="about" class="why-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">Our Promise</div>
+        <div class="section-title">Built for Beginners,<br>By Design</div>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-image-area reveal">
+        <div class="why-headline">
+          Pakistan's Most
+          <em>Beginner-Friendly</em>
+          Jobs Platform
+        </div>
+        <div class="why-mini-stats">
+          <div class="mini-stat">
+            <div class="mini-stat-num">98%</div>
+            <div class="mini-stat-label">Jobs require no prior experience</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">Daily</div>
+            <div class="mini-stat-label">Fresh job listings added</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">Free</div>
+            <div class="mini-stat-label">Always free for job seekers</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">38+</div>
+            <div class="mini-stat-label">Cities and regions covered</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="why-icon-wrap">⚡</div>
+          <div>
+            <div class="why-item-title">Fast & Daily Updates</div>
+            <div class="why-item-text">New jobs are added every single day. No outdated listings. Every job has a clear deadline so you never miss an opportunity.</div>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon-wrap">✅</div>
+          <div>
+            <div class="why-item-title">Eligibility Check First</div>
+            <div class="why-item-text">Our unique eligibility checklist helps you know immediately if a job is right for you — before you spend time reading through all the details.</div>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon-wrap">📖</div>
+          <div>
+            <div class="why-item-title">Simple, Urdu-Friendly Guides</div>
+            <div class="why-item-text">Career guides written in plain, easy-to-understand language. No jargon. No confusion. Just clear advice that actually helps.</div>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon-wrap">📱</div>
+          <div>
+            <div class="why-item-title">Mobile-First Design</div>
+            <div class="why-item-text">Fully optimised for mobile. Browse, check eligibility, and apply — all from your phone with no frustration.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ELIGIBILITY PAGE PREVIEW ────────────────── -->
+<div class="page-section-label">🔍 Page 2 — Eligibility Check Page (Interactive Funnel Step)</div>
+<section id="eligibility" class="eligibility-preview">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">Funnel Page 2 of 3</div>
+        <div class="section-title">Eligibility Check</div>
+      </div>
+    </div>
+    <div class="eligibility-demo">
+      <div class="eli-card reveal">
+        <div class="eli-card-header">
+          <div class="eli-job-title">Data Entry Operator — Lahore</div>
+          <div class="eli-meta">
+            <span class="eli-meta-item">💰 35K–45K PKR</span>
+            <span class="eli-meta-item">📍 Lahore</span>
+            <span class="eli-meta-item">📅 Apr 30</span>
+          </div>
+        </div>
+        <div class="eli-body">
+          <div class="eli-subtitle">Am I eligible? Tick what applies to you:</div>
+          <div class="checklist">
+            <div class="check-item checked" onclick="this.classList.toggle('checked')">
+              <div class="check-box">✓</div>
+              I have passed Matric or Intermediate
+            </div>
+            <div class="check-item checked" onclick="this.classList.toggle('checked')">
+              <div class="check-box">✓</div>
+              I can use a computer or smartphone
+            </div>
+            <div class="check-item checked" onclick="this.classList.toggle('checked')">
+              <div class="check-box">✓</div>
+              I know basic typing (any speed)
+            </div>
+            <div class="check-item" onclick="this.classList.toggle('checked')">
+              <div class="check-box"></div>
+              I can use WhatsApp or Email
+            </div>
+            <div class="check-item" onclick="this.classList.toggle('checked')">
+              <div class="check-box"></div>
+              I can attend an interview if called
+            </div>
+          </div>
+          <div class="eli-result">
+            <div class="eli-result-emoji">🎉</div>
+            <div class="eli-result-text">You Appear Eligible!</div>
+            <div class="eli-result-sub">3 of 5 criteria matched. View full details below.</div>
+          </div>
+          <div class="eli-cta">
+            <button class="btn-full">View Full Job Details →</button>
+          </div>
+          <div class="ad-mid">300×250 AdSense Rectangle</div>
+        </div>
+      </div>
+
+      <div class="eli-explain reveal">
+        <h3>Why We Use an Eligibility Checklist</h3>
+        <p>Most job seekers waste time applying for roles they won't qualify for. Our quick checklist gives you a clear answer in under 30 seconds — and only shows you the full listing when it makes sense.</p>
+        <p style="font-size:0.85rem;color:var(--gray-600)">This 3-step funnel approach keeps the experience clean, trust-building, and AdSense-compliant.</p>
+        <div class="funnel-steps">
+          <div class="funnel-step">
+            <div class="step-num">1</div>
+            <div class="step-text"><strong>Homepage Card</strong> — Job summary with CTA</div>
+          </div>
+          <div class="funnel-step">
+            <div class="step-num" style="background:var(--gold);color:var(--navy)">2</div>
+            <div class="step-text"><strong>Eligibility Page</strong> — Interactive checklist <em>(you are here)</em></div>
+          </div>
+          <div class="funnel-step">
+            <div class="step-num">3</div>
+            <div class="step-text"><strong>Full Job Detail</strong> — Complete listing + Apply button</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── JOB DETAIL PAGE PREVIEW ────────────────── -->
+<div class="page-section-label">📄 Page 3 — Full Job Detail Page</div>
+<section class="job-detail-preview">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">Funnel Page 3 of 3</div>
+        <div class="section-title">Full Job Listing</div>
+      </div>
+    </div>
+    <div class="detail-demo">
+      <div class="detail-main reveal">
+        <div class="detail-header">
+          <div class="detail-company-row">
+            <div class="detail-company-logo">🏢</div>
+            <div>
+              <div class="detail-company-name">Private Tech Company · Lahore</div>
+            </div>
+          </div>
+          <div class="detail-title">Data Entry Operator</div>
+          <div class="detail-tags">
+            <span class="detail-tag">📋 Data Entry</span>
+            <span class="detail-tag">🎓 Matric / Inter</span>
+            <span class="detail-tag">🕐 Full Time</span>
+            <span class="detail-tag">📍 Lahore, Punjab</span>
+            <span class="detail-tag">⭐ Featured</span>
+          </div>
+        </div>
+        <div class="detail-body">
+          <div class="detail-section">
+            <div class="detail-section-title"><span class="detail-section-icon">📋</span> Job Overview</div>
+            <p style="font-size:0.85rem;color:var(--gray-600);line-height:1.7">We are looking for a motivated and reliable Data Entry Operator to join our growing team in Lahore. This is an entry-level position suitable for fresh candidates with basic computer knowledge. No prior experience is required — we will train the right candidate.</p>
+          </div>
+          <div class="ad-mid">In-content 300×250 AdSense Rectangle</div>
+          <div class="detail-section">
+            <div class="detail-section-title"><span class="detail-section-icon">📝</span> Responsibilities</div>
+            <ul class="detail-list">
+              <li>Enter and update data in company systems and spreadsheets</li>
+              <li>Verify accuracy of data before submission</li>
+              <li>Maintain organised digital and physical records</li>
+              <li>Communicate updates to supervisor via WhatsApp or email</li>
+              <li>Complete daily targets within office hours</li>
+            </ul>
+          </div>
+          <div class="detail-section">
+            <div class="detail-section-title"><span class="detail-section-icon">✅</span> Requirements</div>
+            <ul class="detail-list">
+              <li>Matric or Intermediate qualification (any board)</li>
+              <li>Basic typing speed (30+ WPM preferred but not mandatory)</li>
+              <li>Familiarity with MS Office or Google Sheets is a plus</li>
+              <li>Honest, punctual, and willing to learn</li>
+              <li>Residents of Lahore preferred</li>
+            </ul>
+          </div>
+          <div class="detail-section">
+            <div class="detail-section-title"><span class="detail-section-icon">🎁</span> Benefits</div>
+            <ul class="detail-list">
+              <li>35,000 – 45,000 PKR per month (based on performance)</li>
+              <li>On-the-job training provided</li>
+              <li>Eid bonus and annual increment</li>
+              <li>Friendly, professional work environment</li>
+            </ul>
+          </div>
+          <div class="detail-section">
+            <div class="detail-section-title"><span class="detail-section-icon">📬</span> How to Apply</div>
+            <ul class="detail-list">
+              <li>Send your CV to the email address listed above</li>
+              <li>Use subject line: "Data Entry — SkillStart Jobs"</li>
+              <li>WhatsApp applications also accepted at the number provided</li>
+              <li>Deadline: April 30, 2026 — apply early</li>
+            </ul>
+          </div>
+          <div class="ad-mid">Post-content 728×90 AdSense Leaderboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="apply-box reveal">
+          <div class="apply-box-header">
+            <div class="apply-salary-label">Monthly Salary</div>
+            <div class="apply-salary">35K – 45K</div>
+          </div>
+          <div class="apply-body">
+            <div class="apply-meta">
+              <div class="apply-meta-row">
+                <span class="apply-meta-icon">📍</span>
+                <div>
+                  <div class="apply-meta-label">Location</div>
+                  <div class="apply-meta-value">Lahore, Punjab</div>
+                </div>
+              </div>
+              <div class="apply-meta-row">
+                <span class="apply-meta-icon">🎓</span>
+                <div>
+                  <div class="apply-meta-label">Education</div>
+                  <div class="apply-meta-value">Matric / Intermediate</div>
+                </div>
+              </div>
+              <div class="apply-meta-row">
+                <span class="apply-meta-icon">🕐</span>
+                <div>
+                  <div class="apply-meta-label">Job Type</div>
+                  <div class="apply-meta-value">Full Time</div>
+                </div>
+              </div>
+              <div class="apply-meta-row">
+                <span class="apply-meta-icon">📅</span>
+                <div>
+                  <div class="apply-meta-label">Deadline</div>
+                  <div class="apply-meta-value" style="color:var(--red)">April 30, 2026</div>
+                </div>
+              </div>
+              <div class="apply-meta-row">
+                <span class="apply-meta-icon">🏢</span>
+                <div>
+                  <div class="apply-meta-label">Company</div>
+                  <div class="apply-meta-value">Private Tech Company</div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-apply">Apply Now →</button>
+            <button class="btn-save">🔖 Save This Job</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ────────────────────────────────────── -->
+<div class="page-section-label">❓ Homepage — FAQ Section</div>
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">Got Questions?</div>
+        <div class="section-title">Frequently Asked Questions</div>
+      </div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <div class="faq-q">Is SkillStart Jobs free to use? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes — 100% free for all job seekers. You never need to pay to browse, apply, or read our career guides.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Do I need a degree to apply for these jobs? <span class="faq-icon">+</span></div>
+        <div class="faq-a">No. All listings on SkillStart Jobs are specifically selected for Matric or Intermediate pass candidates. No degree required.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">How often are new jobs added? <span class="faq-icon">+</span></div>
+        <div class="faq-a">We add new jobs daily. Our ticker at the top of the page shows the latest additions in real time.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Can I apply from my phone? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Absolutely. SkillStart Jobs is fully mobile-optimised. Browse and apply without needing a computer.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Are remote job listings genuine? <span class="faq-icon">+</span></div>
+        <div class="faq-a">We manually review remote listings before publishing. Always verify the employer before sharing personal information.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">How do I get job alerts? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Subscribe to our newsletter or join our WhatsApp channel to receive instant alerts when new jobs match your preference.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NEWSLETTER ────────────────────────────────── -->
+<section class="newsletter-section">
+  <div class="newsletter-inner reveal">
+    <h2>Never Miss a <em>Job Again</em></h2>
+    <p>Get daily job alerts straight to your inbox. Free. No spam. Unsubscribe anytime.</p>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="Enter your email address">
+      <button class="btn-subscribe">Subscribe →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AD BEFORE FOOTER ────────────────────────── -->
+<div class="ad-banner">
+  <span class="ad-label">Ad</span>
+  <div class="ad-placeholder">— Google AdSense 728×90 Leaderboard — Before Footer —</div>
+</div>
+
+<!-- ─── FOOTER ────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Skill<span>Start</span> Jobs</div>
+        <div class="footer-about">Pakistan's most beginner-friendly job discovery platform. Updated daily with real opportunities for Matric and Intermediate pass candidates across all major cities.</div>
+        <div class="footer-socials">
+          <a class="social-btn" title="Facebook">f</a>
+          <a class="social-btn" title="WhatsApp">W</a>
+          <a class="social-btn" title="Telegram">T</a>
+          <a class="social-btn" title="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="#">Latest Jobs</a>
+          <a href="#">Blog / Guides</a>
+          <a href="#">Job Categories</a>
+          <a href="#">Browse by City</a>
+          <a href="#">Featured Jobs</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Advertise</a>
+          <a href="#">Post a Job</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Disclaimer</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">DMCA / Copyright</a>
+        </div>
+      </div>
+      <div class="footer-col" id="contact">
+        <h4>Get In Touch</h4>
+        <div class="footer-links">
+          <a href="#">📧 hello@skillstartjobs.online</a>
+          <a href="#">💬 WhatsApp Channel</a>
+          <a href="#">📘 Facebook Page</a>
+        </div>
+        <div style="margin-top:1rem;padding:0.85rem;background:rgba(232,160,32,0.08);border:1px solid rgba(232,160,32,0.15);border-radius:8px">
+          <div style="font-size:0.7rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">📢 WhatsApp Alerts</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Join our channel for instant job alerts on WhatsApp.</div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 SkillStart Jobs · Powered by SkillStart Jobs. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── FLOATING CTA ────────────────────────────── -->
+<a href="#jobs" class="floating-cta">
+  💼 Browse Jobs
+</a>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.transitionDelay = (i * 0.05) + 's';
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Sticky header bg adjustment
+  window.addEventListener('scroll', () => {
+    const h = document.querySelector('.header');
+    if (window.scrollY > 30) {
+      h.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)';
+    } else {
+      h.style.boxShadow = 'none';
+    }
+  });
+
+  // FAQ toggle visual
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const icon = item.querySelector('.faq-icon');
+      icon.textContent = icon.textContent === '+' ? '−' : '+';
+    });
+  });
+</script>
+</body>
+</html>
+
+

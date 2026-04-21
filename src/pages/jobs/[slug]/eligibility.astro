@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const jobs = await getCollection("jobs", ({ data }) => data.active);
+  return jobs.map((job) => ({ params: { slug: job.slug }, props: { job } }));
+}
+
+const { job } = Astro.props;
+---
+<BaseLayout title={`Eligibility Check - ${job.data.title} | SkillStart Jobs`} description={`Quick checklist for ${job.data.title}`}>
+  <script is:inline define:vars={{ slug: job.slug }}>
+    try {
+      sessionStorage.setItem(`eligibilityVisited:${slug}`, "1");
+    } catch {}
+  </script>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> / <a href={`/jobs/${job.slug}/`}>{job.data.title}</a> / Eligibility</div>
+      <div class="eyebrow">Step 2 of 3</div>
+      <h1>{job.data.title} - Eligibility Check</h1>
+      <p>Salary: {job.data.salary} | Location: {job.data.location} | Deadline: {job.data.deadline}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <article class="content-card">
+        <h2 style="margin-top:0">Quick Checklist</h2>
+        <p>Select what applies to you. If 3 or more points match, this role is likely suitable.</p>
+        <div class="checklist" data-eligibility>
+          {job.data.eligibility.map((item, idx) => (
+            <div class={idx < 3 ? "check-item checked" : "check-item"}>
+              <div class="check-box">{idx < 3 ? "?" : ""}</div>
+              {item}
+            </div>
+          ))}
+        </div>
+        <div id="eligibilityResult" class="result good"></div>
+        <div class="ad">Google AdSense 300x250 placeholder</div>
+        <p><a class="btn-primary" href={`/jobs/${job.slug}/`}>View Full Job Details</a></p>
+      </article>
+      <aside class="side-card">
+        <h3 style="margin-top:0">How this helps</h3>
+        <p>This screen saves your time before reading full requirements and applying.</p>
+        <ol>
+          <li>Homepage card click</li>
+          <li>Eligibility check</li>
+          <li>Full job details and apply</li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+

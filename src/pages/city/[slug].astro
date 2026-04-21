@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import JobCard from "../../components/JobCard.astro";
+import { getJobImage } from "../../data/unsplash";
+
+export async function getStaticPaths() {
+  return [{ params: { slug: "lahore" } }];
+}
+
+const jobs = await getCollection("jobs", ({ data }) => data.active);
+---
+<BaseLayout title="City Jobs - SkillStart Jobs" description="Browse beginner-friendly jobs by city.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> / City</div>
+      <h1>Jobs by City</h1>
+      <p>Fresh and low-experience roles available in this city.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid-jobs">
+        {jobs.map((job) => (
+          <JobCard
+            title={job.data.title}
+            company={job.data.company}
+            location={job.data.location}
+            education={job.data.education}
+            salary={job.data.salary}
+            postedDate={job.data.postedDate}
+            href={`/jobs/${job.slug}/eligibility/`}
+            image={getJobImage(job.slug)}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

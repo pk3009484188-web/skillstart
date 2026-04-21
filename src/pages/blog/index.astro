@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import { getBlogImage } from "../../data/unsplash";
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+---
+<BaseLayout title="Career Blog - SkillStart Jobs" description="Career guides for matric and intermediate candidates.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> / Blog</div>
+      <h1>Career Guides</h1>
+      <p>Actionable content for fresh candidates.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-blog">
+        {posts.map((post, idx) => (
+          <BlogCard
+            title={post.data.title}
+            excerpt={post.data.excerpt}
+            href={`/blog/${post.slug}/`}
+            cover={post.data.category.toUpperCase()}
+            coverImage={getBlogImage(post.data.featuredImage, post.data.category, idx)}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

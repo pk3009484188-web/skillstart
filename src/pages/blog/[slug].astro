@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<BaseLayout title={`${post.data.seoTitle} - SkillStart Jobs`} description={post.data.seoDescription}>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {post.data.title}</div>
+      <h1>{post.data.title}</h1>
+      <p>Published {post.data.publishedDate} | Updated {post.data.updatedDate}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <article class="content-card">
+        <Content />
+      </article>
+      <aside class="side-card">
+        <h3 style="margin-top:0">Post Metadata</h3>
+        <p><strong>Author:</strong> {post.data.author}</p>
+        <p><strong>Category:</strong> {post.data.category}</p>
+        <p><strong>Tags:</strong> {post.data.tags.join(", ")}</p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
