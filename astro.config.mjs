@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
 
-export default defineConfig({
-  site: "https://skillstartjobs.online"
-});
+import cloudflare from "@astrojs/cloudflare";
 
+export default defineConfig({
+  site: "https://skillstartjobs.online",
+  adapter: cloudflare()
+});
